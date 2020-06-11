@@ -1,0 +1,7 @@
+web:
+  build: ./.docker
+  ports:
+    - 3000:3000
+  volumes:
+    - ./:/var/www
+  command: php ./artisan serve --port=3000 --host=0.0.0.0

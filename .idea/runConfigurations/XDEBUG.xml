@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="XDEBUG" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="laravel-xdebug" session_id="XDEBUG">
+    <method v="2" />
+  </configuration>
+</component>
