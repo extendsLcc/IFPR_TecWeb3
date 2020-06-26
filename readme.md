@@ -7,11 +7,25 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Comandos
 
-Iniciar servidor de Desenvolvimento
+##### Iniciar servidor de Desenvolvimento
 ```
 docker-compose up
 ```
 
+##### executar comandos no container
+```
+docker ps -> para vizualizar nome do container
+docker exec -it nome_do_container /bin/bash
+```
+
+##### instalar dependencias
+```
+composer install
+npm install
+npm run dev
+```
+
+
 ## TODO 
 
-Completar inforamções do readme
+Completar informações do readme
