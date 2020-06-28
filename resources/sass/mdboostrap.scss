@@ -1,0 +1,42 @@
+// FontAwesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap.scss';
+
+// MDBootstrap
+$image-path: '~mdbootstrap/img' !default;
+@import '~mdbootstrap/scss/mdb-free.scss';
+
+// Import MDBootstrap free addons
+@import '~mdbootstrap/scss/addons/datatables';
+@import '~mdbootstrap/scss/addons/datatables2';
+@import '~mdbootstrap/scss/addons/datatables-select';
+@import '~mdbootstrap/scss/addons/datatables-select2';
+@import '~mdbootstrap/scss/addons/directives';
+@import '~mdbootstrap/scss/addons/flag';
+@import '~mdbootstrap/scss/addons/hierarchical-display';
+@import '~mdbootstrap/scss/addons/rating';
+
+// Hide the default select and dropdown menu icons
+// and use MDBootstraps default one
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+// Hide the number arrows from "number" fields
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}

@@ -13,11 +13,6 @@ try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
-    // require('bootstrap');
-    require('mdbootstrap/js/bootstrap.js')
-    require( 'mdbootstrap/js/mdb.js' );
-    require( 'mdbootstrap/js/addons/datatables2.min.js' );
-
 } catch (e) { console.log(e) }
 
 /**
