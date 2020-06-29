@@ -10,7 +10,7 @@
 
         </header>
 
-        <main class="flex-fill">
+        <main class="flex-fill pt-5" style="padding-bottom: 2rem">
 
             @yield( 'content' )
 

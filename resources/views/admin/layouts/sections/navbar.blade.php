@@ -12,7 +12,9 @@
         <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home
+                <a class="nav-link" href="/">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
@@ -20,11 +22,13 @@
             <li class="nav-item dropdown">
 
                 <a class="nav-link dropdown-toggle" id="navbar-dropdown-series" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">Séries
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-film"></i>
+                    <span>Séries</span>
                 </a>
 
                 <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbar-dropdown-series">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="/series">
                         <i class="fas fa-align-justify"></i>
                         <span>Listar</span>
                     </a>
