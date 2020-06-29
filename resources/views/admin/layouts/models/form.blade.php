@@ -11,7 +11,7 @@
             <div class="card-header d-flex flex-row align-items-center">
 
                 <h5 class="h5 mb-0">
-                    <i class="fas fa-th-list"></i>
+                    <i class="fas fa-clipboard-list"></i>
                     <span>@yield( 'form-title' )</span>
                 </h5>
 
@@ -22,7 +22,7 @@
 
             <div class="card-body">
 
-                @yield('table-body')
+                @yield('form-body')
 
             </div>
 

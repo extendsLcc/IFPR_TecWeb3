@@ -28,11 +28,11 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbar-dropdown-series">
-                    <a class="dropdown-item" href="/series">
+                    <a class="dropdown-item" href="{{ route('series.list') }}">
                         <i class="fas fa-align-justify"></i>
                         <span>Listar</span>
                     </a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{{ route('series.form.new') }}">
                         <i class="fas fa-plus"></i>
                         <span>Adicionar</span>
                     </a>

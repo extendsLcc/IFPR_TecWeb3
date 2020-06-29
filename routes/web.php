@@ -17,8 +17,11 @@ Route::get('/', function () {
     return view('admin.pages.home.index');
 });
 
-Route::get('/series', function () {
-    return view('admin.pages.series.index');
+
+Route::prefix('series')->name('series.')->group(function () {
+    Route::get('/', 'SeriesController@renderIndex')->name('list');
+    Route::get('/create', 'SeriesController@renderCreate')->name('form.new');
+    Route::post('/create', 'SeriesController@store')->name('store');
 });
 
 Auth::routes();
