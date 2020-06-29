@@ -3,7 +3,7 @@
 
 Projeto para aprendizado do framework Laravel duante as aulas de TecWeb 3 - Analise e Desenvolvimento de Sistemas - IFPR
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Controle de Séries.
 
 ## Comandos
 
@@ -23,8 +23,16 @@ docker exec -it nome_do_container /bin/bash
 composer install
 npm install
 npm run dev
+php artisan key:generate
+php artisan migrate
 ```
 
+
+###### rodar na maquina local sem docker
+
+```
+php artisan serve
+```
 
 ## TODO 
 

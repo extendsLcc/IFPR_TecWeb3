@@ -10,7 +10,7 @@ class SeriesController extends Controller
 
     public function renderIndex( Request $request ){
 
-        $series = Series::all();
+        $series = Series::all()->sortBy('nome');
 
         return view('admin.pages.series.index', compact('series'));
 
@@ -24,12 +24,9 @@ class SeriesController extends Controller
 
     public function store( Request $request ){
 
-        $nome = $request->nome;
-        $serie = new Series();
-        $serie->nome = $nome;
-        $serie->save();
+        $serie = Series::create($request->all());
 
-        return redirect(route('series.list'))->with('message', 'Cadastro realizado com sucesso.');
+        return redirect(route('series.list'))->with('message', "Registro {$serie->nome} salvo com sucesso: id:{$serie->id}");
 
     }
 

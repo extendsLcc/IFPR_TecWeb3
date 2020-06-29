@@ -6,6 +6,17 @@
 
         @include( 'admin.components.breadcrumb' )
 
+        @if( session('message') )
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <span>{{ session('message')  }}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+        @endif
+
         <div class="card">
 
             <div class="card-header d-flex flex-row align-items-center">
