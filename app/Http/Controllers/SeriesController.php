@@ -30,4 +30,12 @@ class SeriesController extends Controller
 
     }
 
+    public function delete( Request $request){
+
+        Series::destroy( $request->id );
+
+        return response( 'série excluida' , 200);
+
+    }
+
 }

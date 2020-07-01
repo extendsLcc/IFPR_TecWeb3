@@ -22,6 +22,7 @@ Route::prefix('series')->name('series.')->group(function () {
     Route::get('/', 'SeriesController@renderIndex')->name('list');
     Route::get('/create', 'SeriesController@renderCreate')->name('form.new');
     Route::post('/create', 'SeriesController@store')->name('store');
+    Route::delete('/{id}', 'SeriesController@delete')->name('delete');
 });
 
 Auth::routes();
