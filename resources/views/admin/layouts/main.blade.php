@@ -24,13 +24,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         body, html{
-            height: 100%;
+            height: 100% !important;
         }
     </style>
     @stack('styles')
 
 </head>
-<body>
+<body style="height: 100% !important;">
 
     @yield('body')
 
