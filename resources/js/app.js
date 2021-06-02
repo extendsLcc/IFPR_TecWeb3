@@ -1,2 +1,2 @@
 require('./bootstrap');
-require( './mdbootstrap.js' );
+require('./vendor.js');
