@@ -1,0 +1,30 @@
+
+@import "theme";
+
+root {
+
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  color: $text-primary;
+
+  header,
+  footer {
+    flex-grow: 0;
+  }
+
+  main {
+    flex: 1 1 auto;
+    background: $color-primary;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+}
