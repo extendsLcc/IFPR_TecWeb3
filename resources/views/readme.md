@@ -1,11 +1,10 @@
 
 
-Definição de Estrutura de pastas das views
+## Definição de Estrutura de pastas das views
 
 ```
 /layouts
- -> 
- /models
+ -> Modelos de arquivos de layout para serem extendidos
 /components
  -> Deve ser um componente reutilizavel genérico. Não deve possuir caracteristicas próprias, as caracteristicas devem ser definidas pelos parametros passados para o componente
     EX: Input, inputSelect, TextArea, breadcrumb, modal 
@@ -27,7 +26,7 @@ Definição de Estrutura de pastas das views
 ```
 
 
-##golden rules
+### golden rules
 ```
 
 1 - View code should be at
