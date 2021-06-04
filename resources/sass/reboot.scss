@@ -28,3 +28,10 @@ body {
   }
 
 }
+
+.contrast-link {
+  transition: color 0.4s;
+  &:hover {
+    color: $text-contrast;
+  }
+}

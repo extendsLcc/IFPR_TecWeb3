@@ -9,6 +9,7 @@
   --text-primary: #adbac7;
   --text-secondary: #768390;
   --text-primary-light: #cdd9e5;
+  --text-contrast: #c0ca33;
 }
 
 $color-primary: var(--color-primary);
@@ -22,6 +23,8 @@ $color-secondary-light: var(--color-secondary-light);
 $text-primary: var(--text-primary);
 $text-secondary: var(--text-secondary);
 $text-primary-light: var(--text-primary-light);
+
+$text-contrast: var(--text-contrast);
 
 .bg-primary {
   background-color: $color-primary !important;
