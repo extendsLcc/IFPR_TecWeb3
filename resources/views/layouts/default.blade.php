@@ -6,7 +6,7 @@
         
         @section( 'header' )
             
-            @include( 'sections.header' )
+            @include( 'sections.header.index' )
         
         @show
     
