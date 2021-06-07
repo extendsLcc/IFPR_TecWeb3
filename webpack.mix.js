@@ -1,7 +1,6 @@
 const mix = require( 'laravel-mix' );
 const MixGlob = require( 'laravel-mix-glob' );
 const del = require( 'del' );
-const env = process.env.NODE_ENV || 'dev';
 
 /*
  |--------------------------------------------------------------------------
@@ -48,7 +47,7 @@ mix
     .scripts( ['public/js/app.js', 'public/js/combine/*'], 'public/js/app.js' )
     .then( () => {
 
-        if (env === 'production') {
+        if (mix.inProduction()) {
 
             del( 'public/js/combine' );
             del( 'public/css/combine' );
