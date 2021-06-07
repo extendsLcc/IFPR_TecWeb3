@@ -4,3 +4,5 @@
 @import "theme";
 
 @import "reboot";
+
+@import "../views/{sections,components}/**/styles.scss";
