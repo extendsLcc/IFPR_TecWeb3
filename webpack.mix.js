@@ -38,14 +38,4 @@ mix
             importer: sassGlobImporter(),
         }
     } )
-    .sass( 'resources/sass/vendor.scss', 'public/css' )
-    .then( () => {
-
-        if (mix.inProduction()) {
-
-            del( 'public/js/combine' );
-            del( 'public/css/combine' );
-
-        }
-
-    } );
+    .sass( 'resources/sass/vendor.scss', 'public/css' );
