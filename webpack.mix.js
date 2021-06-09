@@ -1,5 +1,6 @@
 const mix = require( 'laravel-mix' );
-const sassGlobImporter = require('node-sass-glob-importer');
+const sassGlobImporter = require( 'node-sass-glob-importer' );
+const glob = require( 'glob' );
 
 /*
  |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ const sassGlobImporter = require('node-sass-glob-importer');
 
 mix
     .browserSync( 'localhost:8000' )
-    .disableNotifications()
+    .disableSuccessNotifications()
     .extract( 'public/js/vendor.js' )
     .js( 'resources/views/{sections,components}/**/*.js', 'public/js/app.js' )
     .js( 'resources/js/app.js', 'public/js/app.js' )
@@ -39,3 +40,13 @@ mix
         }
     } )
     .sass( 'resources/sass/vendor.scss', 'public/css' );
+
+
+const pagesFolders = glob.sync( 'resources/views/pages/*' )
+
+for (const pageFolder of pagesFolders ) {
+
+    const pageName = pageFolder.split('/').pop();
+    mix.js( `${pageFolder}/**/*.js`, `public/js/pages/${ pageName }.js` )
+
+}
