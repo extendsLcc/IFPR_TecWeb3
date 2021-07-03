@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <title>Controle de Séries - @yield('title')</title>
+    {{-- TODO: change site name by aplication type --}}
+    <title>TecWeb 3 - @yield('title')</title>
     
     <meta name="description" content="@yield('meta_description', 'controle series')">
     <meta name="author" content="extendsLcc">
