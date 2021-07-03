@@ -44,11 +44,11 @@
 7 - If a view needs aditional js files that do not belong either to a section or a component, those aditional js files should be at
 /{view-name}/js/{descritive-file-name}.js
 8 - same as 4 but for css
-/{view-name}/index.css
+/{view-name}/styles.css
 9 - same as 5 but for css
-/{view-name}/sections/{section-name}/index.css
+/{view-name}/sections/{section-name}/styles.css
 10 - same as 6 but for css
-/{view-name}/components/{component-name}/index.css
+/{view-name}/components/{component-name}/styles.css
 11 - same as 7 but for css
 /{view-name}/css/{descritive-file-name}.css
 
@@ -56,12 +56,12 @@
 EX:
 /view/index.blade
 /view/index.js
-/view/index.css
+/view/styles.css
 /view/components/index.blade
 /view/components/index.js
-/view/components/index.css
+/view/components/styles.css
 /view/sections/index.blade
 /view/sections/index.js
-/view/sections/index.css
+/view/sections/styles.css
 
 ```
