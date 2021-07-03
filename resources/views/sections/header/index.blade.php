@@ -13,13 +13,13 @@
             <i class="fas fa-bars"></i>
         </button>
         
-        <a class="navbar-brand" href="#">Controle de Séries</a>
+        <a class="navbar-brand" href="/">TecWeb 3</a>
         
         <div class="collapse navbar-collapse" id="main-navbar">
             
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active ripple ripple-surface-white" href="#">
+                    <a class="nav-link active ripple ripple-surface-white" href="/">
                         <i class="fa fa-home"></i>
                         <span>Home</span>
                     </a>
@@ -27,16 +27,15 @@
                 <li class="nav-item dropdown">
                     <a
                         class="nav-link dropdown-toggle ripple ripple-surface-white"
-                        href="#"
-                        id="nav-serie-dropdown"
+                        id="nav-produto-dropdown"
                         role="button"
                         data-mdb-toggle="dropdown"
                         aria-expanded="false"
                     >
-                        <i class="fas fa-film"></i>
-                        <span>Séries</span>
+                        <i class="fas fa-box-open"></i>
+                        <span>Produtos</span>
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="nav-serie-dropdown">
+                    <ul class="dropdown-menu" aria-labelledby="nav-produto-dropdown">
                         <li>
                             <a class="dropdown-item ripple" href="#">
                                 <i class="fas fa-align-justify"></i>
@@ -49,10 +48,6 @@
                                 <span>Cadastrar</span>
                             </a>
                         </li>
-                        {{--<li><hr class="dropdown-divider" /></li>
-                        <li>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </li>--}}
                     </ul>
                 </li>
             
