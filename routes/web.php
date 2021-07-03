@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ViewsControllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home.index');
-});
+
+Route::namespace( 'ViewsControllers' )->group( function () {
+
+
+    Route::get( '/', [HomeController::class, 'index'] );
+
+} );
+
