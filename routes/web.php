@@ -18,6 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get( '/', [HomeController::class, 'index'] );
 
-Route::resource( 'produtos', ProdutoController::class )
-    ->only( ['create', 'index', 'show'] );
+Route::name( 'produtos.' )
+    ->prefix( '/produtos' )
+    ->group( function () {
+
+        Route::resource( '', ProdutoController::class )
+            ->only( ['create', 'index', 'show'] );
+
+        Route::get( '/{name}/{quantity}/{price}', [ProdutoController::class, 'show'] );
+
+    } );
 

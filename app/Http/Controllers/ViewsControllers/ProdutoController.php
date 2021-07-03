@@ -22,10 +22,14 @@ class ProdutoController extends Controller
 
     }
 
-    public function show()
+    public function show( $name, $quantity, $price )
     {
 
-        return view( 'pages.produtos.show.index' );
+        return view( 'pages.produtos.show.index', [
+            'name' => $name,
+            'quantity' => $quantity,
+            'price' => $price,
+        ] );
 
     }
 
