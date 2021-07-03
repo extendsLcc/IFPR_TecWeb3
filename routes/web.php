@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ViewsControllers\CategoriaController;
 use App\Http\Controllers\ViewsControllers\HomeController;
 use App\Http\Controllers\ViewsControllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,6 @@ Route::name( 'produtos.' )
 
     } );
 
+
+Route::resource( '/categorias', CategoriaController::class )
+    ->only( ['create', 'index', 'show'] );
