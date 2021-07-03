@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ViewsControllers\HomeController;
+use App\Http\Controllers\ViewsControllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::namespace( 'ViewsControllers' )->group( function () {
+Route::get( '/', [HomeController::class, 'index'] );
 
-
-    Route::get( '/', [HomeController::class, 'index'] );
-
-} );
+Route::resource( 'produtos', ProdutoController::class )
+    ->only( ['create', 'index', 'show'] );
 
