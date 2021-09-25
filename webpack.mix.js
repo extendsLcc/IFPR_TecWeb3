@@ -25,7 +25,7 @@ const glob = require( 'glob' );
  */
 
 mix
-    .browserSync( 'localhost:8000' )
+    .browserSync( `${ process.env.APP_URL }:8000` )
     .disableSuccessNotifications()
     .extract( 'public/js/vendor.js' )
     .js( 'resources/views/{sections,components}/**/*.js', 'public/js/app.js' )
@@ -44,9 +44,10 @@ mix
 
 const pagesFolders = glob.sync( 'resources/views/pages/*' )
 
-for (const pageFolder of pagesFolders ) {
+for (const pageFolder of pagesFolders) {
 
-    const pageName = pageFolder.split('/').pop();
-    mix.js( `${pageFolder}/**/*.js`, `public/js/pages/${ pageName }.js` )
+    const pageName = pageFolder.split( '/' ).pop();
+    const pageScriptsFiles = glob.sync( `${ pageFolder }/**/*.js` )
+    pageScriptsFiles.length && mix.js( `${ pageFolder }/**/*.js`, `public/js/pages/${ pageName }.js` )
 
 }
