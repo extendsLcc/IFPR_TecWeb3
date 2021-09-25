@@ -13,3 +13,5 @@ else
     echo "${sailAlias}" >> ~/.bashrc
     echo "Sail has been aliased in ~/bashrc"
 fi
+
+cp .env.example .env
