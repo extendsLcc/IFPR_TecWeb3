@@ -25,7 +25,7 @@ const glob = require( 'glob' );
  */
 
 mix
-    .browserSync( `${ process.env.APP_URL }:8000` )
+    .browserSync( `${ process.env.APP_URL }:80` )
     .disableSuccessNotifications()
     .extract( 'public/js/vendor.js' )
     .js( 'resources/views/{sections,components}/**/*.js', 'public/js/app.js' )
@@ -39,12 +39,14 @@ mix
             importer: sassGlobImporter(),
         }
     } )
-    .sass( 'resources/sass/vendor.scss', 'public/css' );
+    .sass( 'resources/sass/vendor.scss', 'public/css', {
+        sassOptions: {
+            importer: sassGlobImporter(),
+        }
+    } );
 
 
-const pagesFolders = glob.sync( 'resources/views/pages/*' )
-
-for (const pageFolder of pagesFolders) {
+for (const pageFolder of glob.sync( 'resources/views/pages/*' )) {
 
     const pageName = pageFolder.split( '/' ).pop();
     const pageScriptsFiles = glob.sync( `${ pageFolder }/**/*.js` )
