@@ -4,7 +4,7 @@ namespace App\Http\Controllers\ViewsControllers;
 
 use App\Http\Controllers\Controller;
 
-class CategoriaController extends Controller
+class CategoryController extends Controller
 {
 
     public function create()
