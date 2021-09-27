@@ -17,17 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get( '/', [HomeController::class, 'index'] );
-
-Route::name( 'produtos.' )
-    ->prefix( '/produtos' )
-    ->group( function () {
-
-        Route::resource( '', ProductController::class )
-            ->only( ['create', 'index', 'show'] );
-
-    } );
+ Route::get('/', [HomeController::class, 'index']);
 
 
-Route::resource( '/categorias', CategoryController::class )
-    ->only( ['create', 'index', 'show'] );
+Route::resource('/produtos', ProductController::class)
+    ->only(['create', 'index', 'show']);
+
+
+Route::resource('/categorias', CategoryController::class)
+    ->only(['create', 'index', 'show']);

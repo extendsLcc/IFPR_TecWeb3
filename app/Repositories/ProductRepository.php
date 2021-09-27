@@ -13,4 +13,9 @@ class ProductRepository
         return Product::orderBy($order, $sort)->paginate($perPage);
     }
 
+    public function find(int $id): Product
+    {
+        return Product::findOrFail($id);
+    }
+
 }

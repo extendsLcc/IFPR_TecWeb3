@@ -5,12 +5,37 @@
 
 @section( 'content' )
 
-    <h1 class="text-white">Página Produtos.SHOW</h1>
-    
-    <br>
-    
-    <p>
-        O produto é {{ $name }}, quantidade {{ $quantity }} e o preço é {{ $price }}
-    </p>
+    @php
+    /** @var $product \App\Models\Product */
+    @endphp
+
+    <div class="container">
+        <div class="row mt-5 px-5">
+            <div class="col-12">
+                <div class="card border-default bg-primary">
+                    <div class="card-header border-color-default d-flex justify-content-between align-items-center">
+                        <span>Produto - {{ $product->name }}</span>
+                    </div>
+                    <div class="card-body text-white">
+
+                        <div class="card-title">{{ $product->name }}</div>
+
+                        <p class="card-text my-2">{{ $product->description }}</p>
+
+                        <p class="text-muted">Preço: R$ {{ number_format( $product->price / 100, 2 ) }}</p>
+                        <p class="text-muted">Estoque: <b>{{ $product->stock }}</b></p>
+
+                        <hr class="border-color-default my-2">
+
+                        <a class="btn btn-dark mt-2" href="{{ route('produtos.index') }}">
+                            <i class="fas fa-undo me-2"></i>
+                            <span>Voltar</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection

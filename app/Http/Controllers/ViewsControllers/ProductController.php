@@ -8,39 +8,36 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function __construct(private ProductRepository $productRepository)
+    {
+    }
+
 
     public function create()
     {
-
         return view('pages.produtos.create.view');
-
     }
 
-    public function index(Request $request, ProductRepository $productRepository)
+    public function index(Request $request)
     {
         $page = $request->query('per_page', 10);
         $order = $request->query('order', 'id');
         $sort = $request->query('sort', 'asc');
 
         return view('pages.produtos.index.view', [
-            'products' => $productRepository->fetch(
+            'products' => $this->productRepository->fetch(
                 perPage: $page,
                 order: $order,
                 sort: $sort
             )
         ]);
-
     }
 
-    public function show($name, $quantity, $price)
+    public function show(int $id)
     {
-
         return view('pages.produtos.show.view', [
-            'name' => $name,
-            'quantity' => $quantity,
-            'price' => $price,
+            'product' => $this->productRepository->find( $id ),
         ]);
-
     }
 
 }

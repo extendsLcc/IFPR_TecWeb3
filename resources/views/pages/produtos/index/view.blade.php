@@ -13,7 +13,7 @@
                         <span>Produtos - Listagem</span>
                         <div class="d-flex">
                             <div class="btn btn-dark">
-                                <span>Cadastrar</span>
+                                <a href="{{ route('produtos.create') }}">Cadastrar</a>
                                 <i class="fas fa-plus ms-2"></i>
                             </div>
                         </div>
@@ -39,9 +39,9 @@
                                     <td>{{ $product->price }}</td>
                                     <td>{{ $product->stock }}</td>
                                     <td>
-                                        <button class="btn btn-dark btn-sm px-2">
+                                        <a href="{{ route('produtos.show', ['produto' => $product->id]) }}" class="btn btn-dark btn-sm px-2">
                                             <i class="fas fa-eye fa-lg"></i>
-                                        </button>
+                                        </a>
                                     </td>
                                 </tr>
                             @endforeach
