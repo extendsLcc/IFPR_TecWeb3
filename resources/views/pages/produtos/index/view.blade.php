@@ -39,8 +39,26 @@
                                     <td>{{ $product->price }}</td>
                                     <td>{{ $product->stock }}</td>
                                     <td>
-                                        <a href="{{ route('produtos.show', ['produto' => $product->id]) }}" class="btn btn-dark btn-sm px-2">
+                                        <a
+                                            href="{{ route('produtos.show', $product->id) }}"
+                                            class="btn btn-dark btn-sm px-2"
+                                            title="Visualizar Produto"
+                                        >
                                             <i class="fas fa-eye fa-lg"></i>
+                                        </a>
+                                        <a
+                                            href=""
+                                            class="btn btn-dark btn-sm px-2"
+                                            title="Alterar Produto"
+                                        >
+                                            <i class="fas fa-edit fa-lg"></i>
+                                        </a>
+                                        <a
+                                            href=""
+                                            class="btn btn-dark btn-sm px-2"
+                                            title="Excluir Produto"
+                                        >
+                                            <i class="fas fa-trash fa-lg"></i>
                                         </a>
                                     </td>
                                 </tr>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\ViewsControllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProductRequest;
 use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 
@@ -36,8 +37,15 @@ class ProductController extends Controller
     public function show(int $id)
     {
         return view('pages.produtos.show.view', [
-            'product' => $this->productRepository->find( $id ),
+            'product' => $this->productRepository->find($id),
         ]);
+    }
+
+
+    public function store(StoreProductRequest $storeProductRequest)
+    {
+        $this->productRepository->store($storeProductRequest->validated());
+        return redirect()->route('produtos.index');
     }
 
 }

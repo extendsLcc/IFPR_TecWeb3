@@ -18,4 +18,9 @@ class ProductRepository
         return Product::findOrFail($id);
     }
 
+    public function store(array $attributes): Product
+    {
+        return Product::create($attributes);
+    }
+
 }
