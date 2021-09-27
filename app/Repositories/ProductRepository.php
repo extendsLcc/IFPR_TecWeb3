@@ -23,4 +23,10 @@ class ProductRepository
         return Product::create($attributes);
     }
 
+    public function update(array $attributes, int $id)
+    {
+        return Product::whereId($id)
+            ->update($attributes);
+    }
+
 }

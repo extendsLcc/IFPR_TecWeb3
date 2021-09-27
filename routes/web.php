@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('/produtos', ProductController::class)
-    ->only(['create', 'index', 'show', 'store']);
+    ->except(['delete']);
 
 
 Route::resource('/categorias', CategoryController::class)

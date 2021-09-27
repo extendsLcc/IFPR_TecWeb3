@@ -48,4 +48,18 @@ class ProductController extends Controller
         return redirect()->route('produtos.index');
     }
 
+    public function edit(int $id)
+    {
+        return view('pages.produtos.edit.view', [
+            'product' => $this->productRepository->find($id),
+        ]);
+    }
+
+    public function update(StoreProductRequest $storeProductRequest)
+    {
+        $productId = request()->route('produto');
+        $this->productRepository->update($storeProductRequest->validated(), $productId);
+        return redirect()->route('produtos.index');
+    }
+
 }

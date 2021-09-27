@@ -47,7 +47,7 @@
                                             <i class="fas fa-eye fa-lg"></i>
                                         </a>
                                         <a
-                                            href=""
+                                            href="{{ route('produtos.edit', $product->id) }}"
                                             class="btn btn-dark btn-sm px-2"
                                             title="Alterar Produto"
                                         >

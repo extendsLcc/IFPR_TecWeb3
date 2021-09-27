@@ -1,9 +1,13 @@
 @extends( 'layouts.default' )
 
 
-@section( 'title', 'Cadastro de Produto' )
+@section( 'title', 'Editar Produto' )
 
 @section( 'content' )
+
+    @php
+        /** @var $product \App\Models\Product */
+    @endphp
 
     <div class="container">
         <div class="row mt-5 px-5">
@@ -14,7 +18,8 @@
                     </div>
                     <div class="card-body text-white">
 
-                        <form method="POST" action="{{ route('produtos.store') }}">
+                        <form method="POST" action="{{ route('produtos.update', $product->id) }}">
+                        @method('PUT')
                         @csrf
                         <!-- Text input -->
                             <div class="form-outline form-white mb-4">
@@ -23,7 +28,7 @@
                                     id="name"
                                     name="name"
                                     class="form-control"
-                                    value="{{ old('name') }}"
+                                    value="{{ old('name', $product->name) }}"
                                 />
                                 <label class="form-label" for="name">Nome do Produto</label>
                                 @error('name')
@@ -34,11 +39,14 @@
                             <div class=" mb-4">
                                 <label class="form-label text-white" for="category_id">Categoria</label>
                                 <select class="form-select" name="category_id">
-                                @foreach( \App\Models\Category::all() as $category )
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @foreach( \App\Models\Category::all() as $category )
+                                        <option
+                                            value="{{ $category->id }}"
+                                            {{ $product->category->id === $category->id ? 'selected' : ''}}
+                                        >{{ $category->name }}</option>
                                     @endforeach
                                 </select>
-                                @error('name')
+                                @error('category_id')
                                 <div class="form-helper text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
@@ -49,7 +57,7 @@
                                     class="form-control"
                                     id="description"
                                     name="description"
-                                    rows="4">{{ old('description') }}</textarea>
+                                    rows="4">{{ old('description', $product->description) }}</textarea>
                                 <label class="form-label" for="description">Descrição do produto</label>
                                 @error('description')
                                 <div class="form-helper text-danger">{{ $message }}</div>
@@ -62,7 +70,7 @@
                                     id="price"
                                     name="price"
                                     class="form-control"
-                                    value="{{ old('description') }}"
+                                    value="{{ old('description', $product->price) }}"
                                 />
                                 <label class="form-label" for="price">Preço</label>
                                 @error('price')
@@ -76,7 +84,7 @@
                                     id="stock"
                                     name="stock"
                                     class="form-control"
-                                    value="{{ old('stock') }}"
+                                    value="{{ old('stock', $product->stock) }}"
                                 />
                                 <label class="form-label" for="stock">Estoque</label>
                                 @error('stock')
