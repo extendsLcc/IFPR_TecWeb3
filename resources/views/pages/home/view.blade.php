@@ -4,20 +4,26 @@
 @section( 'title', 'Home' )
 
 @section( 'content' )
-    
+
     <div class="container my-5">
         <!--Section: Content-->
         <section class="col-12">
             <!-- Jumbotron -->
-            <div id="intro" class="p-4 text-center bg-secondary shadow-5 rounded mb-5">
+            <div id="intro" class="p-4 text-center bg-primary border-secondary shadow-5 rounded mb-5">
                 <h1 class="mb-3 h2 text-white">TecWeb 3 - TADS</h1>
                 <div class="mb-3 text-white">
                     <span>Frameworks:</span>
                     <div class="flex justify-center">
                         <ul class="ml-10 list-disc text-justify">
-                            <li><a href="https://laravel.com/">Laravel</a></li>
-                            <li><a href="https://mdbootstrap.com/">MDBootstrap</a></li>
-                            <li><a href="https://tailwindcss.com/">Tailwindcss</a></li>
+                            <li>
+                                <a class="link" href="https://laravel.com/">Laravel</a>
+                            </li>
+                            <li>
+                                <a class="link" href="https://mdbootstrap.com/">MDBootstrap</a>
+                            </li>
+                            <li>
+                                <a class="link" href="https://tailwindcss.com/">Tailwindcss</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

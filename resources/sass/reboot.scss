@@ -1,5 +1,5 @@
 
-@import "theme";
+@import "variables";
 
 root {
 
@@ -19,7 +19,7 @@ body {
 
   main {
     flex: 1 1 auto;
-    background: $color-primary;
+    background: $background-color;
   }
 
   header {
@@ -34,4 +34,28 @@ body {
   &:hover {
     color: $text-contrast;
   }
+}
+
+.bg-primary {
+  background-color: $color-primary !important;
+}
+
+.bg-secondary {
+  background-color: $color-secondary !important;
+}
+
+.border-secondary {
+  border: solid 1px $color-secondary !important;
+}
+
+.border-secondary-light {
+  border: solid 1px $color-secondary-light !important;
+}
+
+.border-default {
+  border: 1px solid $border-default;
+}
+
+a.link:hover {
+  color: var(--link-hover-color);
 }
