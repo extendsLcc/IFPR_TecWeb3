@@ -4539,9 +4539,9 @@ md5@^2.3.0:
     is-buffer "~1.1.6"
 
 mdb-ui-kit@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/mdb-ui-kit/-/mdb-ui-kit-3.6.0.tgz#9dd8ccb6752d227de9b32e2108feaed0585477c7"
-  integrity sha512-9iaSXTE9Aprwem6ONaT+Tw8GE0f7Q3s3pFjTvj+nnOnzWn2ha7kYgfV2xfXRKpvmZTcVknXL2UtOnKgTqvq1nQ==
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/mdb-ui-kit/-/mdb-ui-kit-3.9.0.tgz#4f41455aa9764641862773d472c8d0460a6febdd"
+  integrity sha512-EZp+c8vav985BMLQh31X/MD+ERzZgtd6e59dXXXFFDGp0I3PoeL//12RgHYbXxEKPx4AvJa4LU6NY8xpAzxaoQ==
 
 mdn-data@2.0.14:
   version "2.0.14"
