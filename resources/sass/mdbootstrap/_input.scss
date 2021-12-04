@@ -1,0 +1,46 @@
+@import "../variables";
+
+.form-outline.form-white .form-control {
+  color: $text-primary;
+  position: relative;
+
+  &:focus ~ .form-label,
+  ~ .form-label {
+    color: $text-secondary
+  }
+
+  ~ .form-notch:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    background: $text-primary;
+    transition: width ease-in-out 0.4s;
+  }
+
+  &:focus ~ .form-notch:after {
+    width: 100%;
+  }
+
+}
+
+.form-outline.form-white .form-control ~ .form-notch {
+  border-radius: 0 0 .25rem .25rem;
+  overflow: hidden;
+
+  .form-notch-leading,
+  .form-notch-middle,
+  .form-notch-trailing {
+    border-color: $text-secondary
+  }
+}
+
+.form-outline.form-white .form-control:focus ~ .form-notch {
+  .form-notch-leading,
+  .form-notch-middle,
+  .form-notch-trailing {
+    border-width: 1px;
+    border-color: $text-secondary;
+  }
+}
