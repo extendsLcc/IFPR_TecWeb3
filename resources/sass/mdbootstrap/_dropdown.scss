@@ -3,3 +3,7 @@
 .dropdown-menu-dark {
   background: $color-secondary;
 }
+
+.dropdown-menu-dark .dropdown-item:active {
+  background-color: $color-primary;
+}
