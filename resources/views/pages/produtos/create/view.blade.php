@@ -37,20 +37,20 @@
                                 @enderror
                             </div>
 
-                            <div class=" mb-4">
+                            <div class="mb-4">
                                 <label class="form-label text-white" for="category_id">Categoria</label>
 
                                 <mwc-select class="form-control p-0" name="category_id">
                                     @foreach( \App\Models\Category::all() as $category )
-                                        <mwc-list-item value="{{ $category->id }}" selected>{{ $category->name }}</mwc-list-item>
+                                        <mwc-list-item
+                                            value="{{ $category->id }}"
+                                            selected
+                                        >
+                                            {{ $category->name }}
+                                        </mwc-list-item>
                                     @endforeach
                                 </mwc-select>
 
-                                {{--<select class="form-select" name="category_id">
-                                @foreach( \App\Models\Category::all() as $category )
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                    @endforeach
-                                </select>--}}
                                 @error('name')
                                 <div class="form-helper text-danger">{{ $message }}</div>
                                 @enderror
