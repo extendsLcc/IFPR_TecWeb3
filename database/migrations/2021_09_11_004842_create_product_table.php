@@ -20,6 +20,7 @@ class CreateProductTable extends Migration
             $table->integer('price')->comment('Price should be saved in cents');
             $table->integer('stock');
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreignId('category_id')->constrained();
         });
