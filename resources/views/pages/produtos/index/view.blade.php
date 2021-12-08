@@ -32,11 +32,15 @@
                                 </tr>
                             </thead>
 
+                            @php
+                                /** @var $products \App\Models\Product[] */
+                            @endphp
+
                             @foreach($products as $product)
                                 <tr class="text-white">
                                     <td>{{ $product->name }}</td>
                                     <td>{{ $product->description }}</td>
-                                    <td>{{ $product->price }}</td>
+                                    <td>{{ $product->price_in_reais }}</td>
                                     <td>{{ $product->stock }}</td>
                                     <td>
                                         <a
