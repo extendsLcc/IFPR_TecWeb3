@@ -22,7 +22,7 @@
 
                         <p class="card-text my-2">{{ $product->description }}</p>
 
-                        <p class="text-muted">Preço: R$ {{ $product->price_in_reais }}</p>
+                        <p class="text-muted">Preço: {{ $product->price_in_reais }}</p>
                         <p class="text-muted">Estoque: <b>{{ $product->stock }}</b></p>
 
                         <hr class="border-color-default my-2">

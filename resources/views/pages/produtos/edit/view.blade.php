@@ -76,7 +76,7 @@
                                     id="price"
                                     name="price"
                                     class="form-control"
-                                    value="{{ old('description', $product->price) }}"
+                                    value="{{ old('price', \App\Helpers\Currency::convertCentsToReais($product->price)) }}"
                                 />
                                 <label class="form-label" for="price">Preço</label>
                                 @error('price')

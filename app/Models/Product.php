@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Helpers\Currency;
+use Akaunting\Money\Money;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -31,7 +31,7 @@ class Product extends Model
 
     public function getPriceInReaisAttribute(): string
     {
-        return number_format(Currency::convertCentsToReais($this->price), 2);
+        return Money::BRL($this->price);
     }
 
 }
