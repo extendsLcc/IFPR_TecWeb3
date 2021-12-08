@@ -1,0 +1,26 @@
+
+mwc-select {
+  --mdc-theme-primary: var(--btn-color);
+  --mdc-select-fill-color: var(--btn-color);
+  --mdc-select-ink-color: var(--btn-text-color);
+  --mdc-select-label-ink-color: var(--btn-hover-border-color);
+  --mdc-select-dropdown-icon-color: var(--btn-text-color);
+
+  --mdc-select-idle-line-color: var(--btn-hover-border-color);;
+  --mdc-select-hover-line-color: var(--btn-hover-border-color);;
+
+  --mdc-select-outlined-idle-border-color: var(--btn-hover-border-color);;
+  --mdc-select-outlined-hover-border-color: var(--btn-hover-border-color);;
+
+  /* inherits the styles of mwc-menu internally */
+  /*--mdc-menu-item-height: 30px;*/
+  --mdc-theme-surface: var(--btn-color);
+
+  /* inherits the styles of mwc-list internally */
+  //--mdc-list-vertical-padding: 0px;
+  //--mdc-list-side-padding: 30px;
+}
+
+mwc-select mwc-list-item {
+  color: var(--btn-text-color);
+}
