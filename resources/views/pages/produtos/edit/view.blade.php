@@ -15,6 +15,12 @@
                 <div class="card border-default bg-primary">
                     <div class="card-header border-color-default d-flex justify-content-between align-items-center">
                         <span>Produtos - Cadastro</span>
+                        <div class="d-flex">
+                            <a class="btn btn-dark mt-2" href="{{ route('produtos.index') }}">
+                                <i class="fas fa-undo me-2"></i>
+                                <span>Voltar</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="card-body text-white">
 
