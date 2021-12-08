@@ -37,13 +37,13 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark border-default" aria-labelledby="nav-produto-dropdown">
                         <li>
-                            <a class="dropdown-item ripple" href="#">
+                            <a class="dropdown-item ripple" href="{{ route('produtos.index') }}">
                                 <i class="fas fa-align-justify"></i>
                                 <span>Listar</span>
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item ripple" href="#">
+                            <a class="dropdown-item ripple" href="{{ route('produtos.create') }}">
                                 <i class="fas fa-plus"></i>
                                 <span>Cadastrar</span>
                             </a>
