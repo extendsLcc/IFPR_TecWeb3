@@ -37,7 +37,7 @@
                             @endphp
 
                             @foreach($products as $product)
-                                <tr class="text-white">
+                                <tr class="text-white align-middle">
                                     <td>{{ $product->name }}</td>
                                     <td>{{ $product->description }}</td>
                                     <td>{{ $product->price_in_reais }}</td>
