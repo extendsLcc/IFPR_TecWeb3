@@ -38,13 +38,16 @@
                             </div>
 
                             <div class="mb-4">
-                                <label class="form-label text-white" for="category_id">Categoria</label>
 
-                                <mwc-select class="form-control p-0" name="category_id">
+                                <mwc-select
+                                    outlined
+                                    label="Categoria"
+                                    class="form-control p-0"
+                                    name="category_id"
+                                >
                                     @foreach( \App\Models\Category::all() as $category )
                                         <mwc-list-item
                                             value="{{ $category->id }}"
-                                            selected
                                         >
                                             {{ $category->name }}
                                         </mwc-list-item>

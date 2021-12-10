@@ -1,24 +1,33 @@
 
 mwc-select {
-  --mdc-theme-primary: var(--btn-color);
-  --mdc-select-fill-color: var(--btn-color);
+  --mdc-theme-primary: var(--text-color);
   --mdc-select-ink-color: var(--btn-text-color);
-  --mdc-select-label-ink-color: var(--btn-hover-border-color);
-  --mdc-select-dropdown-icon-color: var(--btn-text-color);
+  --mdc-select-label-ink-color: var(--text-primary);
+  --mdc-select-focused-label-color: var(--text-primary);
 
-  --mdc-select-idle-line-color: var(--btn-hover-border-color);;
-  --mdc-select-hover-line-color: var(--btn-hover-border-color);;
-
-  --mdc-select-outlined-idle-border-color: var(--btn-hover-border-color);;
-  --mdc-select-outlined-hover-border-color: var(--btn-hover-border-color);;
+  --mdc-select-outlined-idle-border-color: var(--btn-hover-border-color);
+  --mdc-select-outlined-hover-border-color: var(--btn-hover-border-color);
+  --mdc-select-outlined-disabled-border-color: var(--color-secondary-light);
 
   /* inherits the styles of mwc-menu internally */
   /*--mdc-menu-item-height: 30px;*/
   --mdc-theme-surface: var(--btn-color);
+  --mdc-select-dropdown-icon-color: var(--text-primary);
+  --mdc-select-focused-dropdown-icon-color: var(--text-primary);
 
-  /* inherits the styles of mwc-list internally */
+    /* inherits the styles of mwc-list internally */
   //--mdc-list-vertical-padding: 0px;
   //--mdc-list-side-padding: 30px;
+
+  background: var(--btn-color) !important;
+  border-width: 0 !important;
+
+  &.form-control,
+  &.form-control:focus {
+    box-shadow: none;
+    border: none;
+    --mdc-theme-primary: var(--text-primary);
+  }
 }
 
 mwc-select mwc-list-item {
