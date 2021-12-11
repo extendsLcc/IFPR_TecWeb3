@@ -1,3 +1,40 @@
+### Work in Progress Readme
+
+### Instalação
+
+Declarar valores da env
+```shell
+cp .env.example .env
+```
+
+Instalar o projeto
+```shell
+bash install.sh
+```
+Executar container da aplicação
+```shell
+sail up -d
+```
+
+Executar migrations do projeto migrations
+```shell
+sail artisan migrate
+```
+Rodar Seed
+```shell
+sail artisan db:seed
+# Irá gerar o usuário padrão
+email: admin@mail.com
+password: 123456
+```
+Gerar assets do projeto
+```shell
+sail yarn install
+
+sail yarn prod # assets de produção
+sail yarn watch # desenvolvimento
+```
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
