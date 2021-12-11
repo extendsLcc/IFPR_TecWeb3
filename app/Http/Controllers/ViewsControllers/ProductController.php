@@ -5,8 +5,10 @@ namespace App\Http\Controllers\ViewsControllers;
 use App\Helpers\Toast;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
+use App\Models\Product;
 use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ProductController extends Controller
 {
@@ -64,6 +66,16 @@ class ProductController extends Controller
         $this->productRepository->update($storeProductRequest->validated(), $productId);
         return back()
             ->with(Toast::showSuccess('Dados atualizados com sucesso!'));
+    }
+
+    public function destroy(int $id)
+    {
+        $product = Product::find($id);
+        if (is_null($product)) {
+            return response(status: Response::HTTP_NOT_FOUND);
+        }
+        $product->delete();
+        return response(status: Response::HTTP_OK);
     }
 
 }

@@ -29,9 +29,7 @@ Route::prefix('/')
         Route::get('/home', [HomeController::class, 'index'])
             ->name('dashboard');
 
-        Route::resource('/produtos', ProductController::class)
-            ->except(['delete']);
-
+        Route::resource('/produtos', ProductController::class);
 
         Route::resource('/categorias', CategoryController::class)
             ->only(['create', 'index', 'show']);

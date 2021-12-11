@@ -58,15 +58,44 @@
                                             <i class="fas fa-edit fa-lg"></i>
                                         </a>
                                         <a
-                                            href=""
+                                            href="#delete"
                                             class="btn btn-dark btn-sm px-2"
                                             title="Excluir Produto"
+                                            onclick="deleteProduct({{$product->id}}, this)"
                                         >
                                             <i class="fas fa-trash fa-lg"></i>
                                         </a>
                                     </td>
                                 </tr>
                             @endforeach
+
+                            @push('scripts')
+                                <script>
+                                    /*POG temporary solution*/
+                                    function deleteProduct( productId, button ) {
+
+                                        if (confirm( 'Realmente deseja excluir o produto?' )) {
+
+                                            fetch( `{{ route('produtos.destroy', '') }}/${productId}`, {
+                                                headers: {
+                                                    "Content-Type": "application/json",
+                                                    "Accept": "application/json",
+                                                    "X-CSRF-Token": '{{ csrf_token() }}'
+                                                },
+                                                method: "DELETE",
+                                            } )
+                                                .then( () => {
+                                                    tata.success( '', 'Produto excluido com sucesso' );
+                                                    button.closest( 'tr' ).remove();
+                                                } )
+                                                .catch( () => {
+                                                    tata.error( '', 'Falha ao excluir produto' );
+                                                } )
+
+                                        }
+                                    }
+                                </script>
+                            @endpush
 
                         </table>
 
