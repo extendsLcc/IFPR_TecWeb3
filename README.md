@@ -3,6 +3,8 @@ Work in Progress Readme
 ### Instruções basicas de instalação do projeto
 
 Declarar valores da env
+<br>
+<small>É necessário declarar valores da env, como nome do banco de dados, usuário e senha</small>
 ```shell
 cp .env.example .env
 ```
