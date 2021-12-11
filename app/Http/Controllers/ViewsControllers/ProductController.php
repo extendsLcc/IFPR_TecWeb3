@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\ViewsControllers;
 
+use App\Helpers\Toast;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
 use App\Repositories\ProductRepository;
@@ -44,8 +45,10 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $storeProductRequest)
     {
-        $this->productRepository->store($storeProductRequest->validated());
-        return redirect()->route('produtos.index');
+        $createdProduct = $this->productRepository->store($storeProductRequest->validated());
+        return response()
+            ->redirectToRoute('produtos.index')
+            ->with(Toast::showSuccess("Produto ({$createdProduct->id}) cadastrado som sucesso!"));
     }
 
     public function edit(int $id)
@@ -59,7 +62,8 @@ class ProductController extends Controller
     {
         $productId = request()->route('produto');
         $this->productRepository->update($storeProductRequest->validated(), $productId);
-        return redirect()->route('produtos.index');
+        return back()
+            ->with(Toast::showSuccess('Dados atualizados com sucesso!'));
     }
 
 }

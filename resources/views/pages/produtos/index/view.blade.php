@@ -6,7 +6,7 @@
 @section( 'content' )
 
     <div class="container">
-        <div class="row mt-5 px-5">
+        <div class="row my-5 px-5">
             <div class="col-12">
                 <div class="card border-default bg-primary">
                     <div class="card-header border-color-default d-flex justify-content-between align-items-center">
