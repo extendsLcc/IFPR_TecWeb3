@@ -17,12 +17,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 
- Route::get('/', [HomeController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
-Route::resource('/produtos', ProductController::class)
-    ->except(['delete']);
+Route::prefix('/')
+    ->middleware('auth')
+    ->group(function () {
+
+        Route::get('/home', [HomeController::class, 'index'])
+            ->name('dashboard');
+
+        Route::resource('/produtos', ProductController::class)
+            ->except(['delete']);
 
 
-Route::resource('/categorias', CategoryController::class)
-    ->only(['create', 'index', 'show']);
+        Route::resource('/categorias', CategoryController::class)
+            ->only(['create', 'index', 'show']);
+
+    });
+
+
+require __DIR__ . '/auth.php';

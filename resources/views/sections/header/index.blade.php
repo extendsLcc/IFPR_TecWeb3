@@ -13,13 +13,13 @@
             <i class="fas fa-bars"></i>
         </button>
 
-        <a class="navbar-brand" href="/">TecWeb 3</a>
+        <a class="navbar-brand" href="{{ route('dashboard') }}">TecWeb 3</a>
 
         <div class="collapse navbar-collapse" id="main-navbar">
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active ripple ripple-surface-white" href="/">
+                    <a class="nav-link active ripple ripple-surface-white" href="{{ route('dashboard') }}">
                         <i class="fa fa-home"></i>
                         <span>Home</span>
                     </a>
@@ -87,7 +87,8 @@
                     </a>
 
 
-                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end border-default" aria-labelledby="nav-user-dropdown">
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end border-default"
+                        aria-labelledby="nav-user-dropdown">
                         <li>
                             <a class="dropdown-item ripple" href="#">
                                 <i class="fas fa-user-circle"></i>
@@ -104,10 +105,13 @@
                             <hr class="dropdown-divider border-secondary-light">
                         </li>
                         <li>
-                            <a class="dropdown-item ripple" href="#">
-                                <i class="fas fa-sign-out-alt"></i>
-                                <span>Deslogar</span>
-                            </a>
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <button class="dropdown-item ripple">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Deslogar</span>
+                                </button>
+                            </form>
                         </li>
 
                     </ul>

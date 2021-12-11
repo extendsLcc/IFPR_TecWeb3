@@ -32,7 +32,9 @@ mix
     .js( 'resources/js/app.js', 'public/js/app.js' )
     .postCss( 'resources/css/app.css', 'public/css' )
     .postCss( 'resources/css/vendor.css', 'public/css', [
+        // require('postcss-import'),
         require( 'tailwindcss' ),
+        // require('autoprefixer'),
     ] )
     .sass( 'resources/sass/app.scss', 'public/css/app.css', {
         sassOptions: {
