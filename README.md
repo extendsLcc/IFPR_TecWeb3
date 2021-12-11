@@ -1,6 +1,6 @@
-### Work in Progress Readme
+Work in Progress Readme
 
-### Instalação
+### Instruções basicas de instalação do projeto
 
 Declarar valores da env
 ```shell
